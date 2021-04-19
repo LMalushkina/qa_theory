@@ -1,0 +1,54 @@
+List a directory:
+ls -l {path} - 	long listing, with date, size and permisions
+ls -a {path} -	show all files, including important .dot files that don't otherwise show
+ls {path} | more	-  show listing one screen at a time
+
+Change to directory:
+cd {dirname}	- there must be a space between
+cd ~	- go back to home directory, useful if you're lost
+cd ..	-  go back one directory
+
+Make a new directory:
+mkdir {dirname} - make a new directory
+
+Remove a directory:
+rmdir {dirname}	- only works if {dirname} is empty
+rm -r {dirname}	- remove all files and subdirs
+
+Print working directory:
+pwd	 - show where you are as full path. Useful if you're lost or exploring
+
+Copy a file or directory:
+cp {file1} {file2}	
+cp -r {dir1} {dir2}	- recursive, copy directory and all subdirs
+cat {newfile} >> {oldfile}	- append newfile to end of oldfile
+
+Move (or rename) a file:
+mv {oldfile} {newfile}	- moving a file and renaming it are the same thing
+mv {oldname} {newname}	
+
+Delete a file/directory:
+rm {filespec}
+
+View a text file:
+more {filename}	- view file one screen at a time
+less {filename}	- like more, with extra features
+cat {filename}	- view file, but it scrolls
+cat {filename} | more	- view file one screen at a time
+
+Edit a text file:
+gedit {filename}	- basic text editor
+
+Create a text file:
+cat > {filename}	- enter your text (multiple lines with enter are ok) and press control-d to save
+gedit {filename}	- create some text and save it
+
+Compare two files:
+diff {file1} {file2}	-show the differences
+sdiff {file1} {file2}	- show files side by side
+
+Other text commands:
+grep '{pattern}' {file}	-find regular expression in file
+spell {file}	- display misspelled words
+wc {file}	- count words in file
+wc -l {file}	- count the number of lines in a file
